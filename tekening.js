@@ -1,65 +1,31 @@
 
-var xGuy;
-
-var speed;
- 
-
+var xCar = 50;
 
 function setup() {
-createCanvas(400, 400); 
-xGuy = 150;
-speed = 3
+  //Canvas van 200 px bij 200 px
+  createCanvas(2000, 1800); 
+  //Één cijfer geeft grijswaarden
+  background(220); 
 }
 
 function draw() {
-
-  document.body.style.backgroundColor = "#821717";
-
-
-ellipseMode(CENTER);
-rectMode(CENTER);
-background(255,0,0);
-
- 
-
-fill(200, 0, 150);
-rect(xGuy, 175, 45, 95);
-
- 
-
-fill(255, 0, 0, 220);
-ellipse(xGuy, 115, 60, 60);
-
-
-  fill(200);
-  ellipse(xGuy, 130, 30, 12);
-
- 
-
-fill(0, 0, 255);
-ellipse(xGuy - 17, 110, 20, 22);
-ellipse(xGuy + 17, 110, 20, 22);
-
- 
- 
-
-line(xGuy - 10, 195, xGuy - 20, 235);
-line(xGuy + 10, 195, xGuy + 20, 235);
-
-
-  line(xGuy - 21, 150, xGuy - 60, 139);
-  line(xGuy + 21, 150, xGuy + 60, 139);
-  
-  
-  line(0, 235, 500, 235)
-  line(0, 237, 500, 237)
-  line(0, 236, 500, 236)
-  
-  xGuy += 1;
-  
-          if (xGuy > width || xGuy < 0){ 
-        speed = -speed;
-    }
-    xGuy += speed;
-}
+    //Geen randen om de auto
+    noStroke(); 
+    //Kies de opvulkleur (rgb)
+    fill(255, 220, 115); 
+    //Parameters: x, y, breedte, hoogte
+    rect(xCar, 100, 110, 20); 
+    rect(xCar + 10, 78, 70, 40);
+    // Wielen
+    //Witte randen voor de wielen
+    stroke(255); 
+    //Iets dikkere randen
+    strokeWeight(2); 
+    fill(12, 66, 66);
+    //Parameters: x, y, breedte, hoogte
+    ellipse(xCar + 25, 121, 24, 24); 
+    ellipse(xCar + 80, 121, 24, 24);
+    stroke(0); //Zwarte weg
+    //Parameters: x1,y1,x2,y2 
+    line(0, 121+12, 200, 121+12);
 };
