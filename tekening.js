@@ -6,9 +6,9 @@ var speed;
 
 
 function setup() {
-createCanvas(400, 300); 
-xGuy = 100;
-speed = 2
+createCanvas(400, 400); 
+xGuy = 150;
+speed = 3
 }
 
 function draw() {
@@ -18,12 +18,12 @@ function draw() {
 
 ellipseMode(CENTER);
 rectMode(CENTER);
-background(255);
+background(255,0,0);
 
  
 
-fill(150, 0, 150);
-rect(xGuy, 150, 45, 95);
+fill(200, 0, 150);
+rect(xGuy, 175, 45, 95);
 
  
 
